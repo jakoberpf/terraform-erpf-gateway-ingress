@@ -1,0 +1,12 @@
+%{ for host, port, domain in proxies ~}
+${domain} {
+    reverse_proxy ${host}:${port}
+    tls ${cloudflare_email} {
+        dns cloudflare ${cloudflare_api_key}
+    }
+    log {
+        output file ${log_file_path}
+    }
+}
+
+%{ endfor ~}
