@@ -3,8 +3,10 @@
 ## Usage
 
 ```hcl
-module "glacier_cluster_ingress" {
-  source = "./../../terraform/modules/erpf/cloudflare-caddy-ingress"
+module "gateway_ingress" {
+  source  = "jakoberpf/gateway-ingress/erpf"
+  version = "0.0.1"
+
   providers = {
     cloudflare = cloudflare
   }
