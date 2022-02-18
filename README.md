@@ -1,5 +1,7 @@
 # The ERPF Ingress - Cloudflare -> Caddy -> Zerotier
 
+[Terraform Registry](https://registry.terraform.io/modules/jakoberpf/gateway-ingress/erpf/latest)
+
 ## Usage
 
 ```hcl
