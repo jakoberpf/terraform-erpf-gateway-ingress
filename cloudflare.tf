@@ -5,7 +5,7 @@ resource "cloudflare_record" "cnames" {
   name     = each.key
   value    = "0.gateway.dns.erpf.de"
   type     = "CNAME"
-  proxied  = true
+  proxied  = false
 }
 
 # api.backup.k8s.infra.erpf.de backup.k8s.infra.erpf.de {
