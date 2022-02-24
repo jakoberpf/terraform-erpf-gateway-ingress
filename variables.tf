@@ -3,17 +3,7 @@ variable "domains" {
   default = []
 }
 
-variable "host" {
-  type    = string
-  default = ""
-}
-
-variable "port" {
-  type    = number
-  default = 0
-}
-
-# variable "proxies" {
+# variable "domains" {
 #   type = map(object({
 #     domain = string
 #     host   = string
@@ -22,8 +12,14 @@ variable "port" {
 #   description = ""
 # }
 
-variable "ssh_secret_key" {
-  type = string
+variable "host" {
+  type    = string
+  default = ""
+}
+
+variable "port" {
+  type    = number
+  default = 0
 }
 
 variable "cloudflare_email" {
@@ -39,4 +35,22 @@ variable "cloudflare_zone_id" {
 variable "cloudflare_token" {
   type        = string
   description = ""
+}
+
+variable "cloudflare_record_value" {
+  type        = string
+  description = "The value of the dns record, aka. the gateway/loadbalancer public ip"
+  default     = "0.gateway.dns.erpf.de"
+}
+
+variable "cloudflare_record_type" {
+  type        = string
+  description = "The type of dns record to set. Can be of type A, AAAA or CNAME"
+  default     = "CNAME"
+}
+
+variable "cloudflare_record_proxied" {
+  type        = bool
+  description = ""
+  default     = false
 }

@@ -3,9 +3,9 @@ resource "cloudflare_record" "cnames" {
   for_each = toset(var.domains)
   zone_id  = var.cloudflare_zone_id
   name     = each.key
-  value    = "0.gateway.dns.erpf.de"
-  type     = "CNAME"
-  proxied  = false
+  value    = var.cloudflare_record_value
+  type     = var.cloudflare_record_type
+  proxied  = var.cloudflare_record_proxied
 }
 
 # api.backup.k8s.infra.erpf.de backup.k8s.infra.erpf.de {
