@@ -5,24 +5,27 @@
 ## Usage
 
 ```hcl
-module "gateway_ingress" {
+module "ingress_module" {
   source  = "jakoberpf/gateway-ingress/erpf"
-  version = "0.0.1"
+  version = "0.0.5"
 
   providers = {
     cloudflare = cloudflare
+    remote     = remote
   }
 
   domains = [
       "application.example.com"
   ]
+
   host    = "gateway.example.com" or "XXX.XXX.XXX.XXX"
   port    = "8000"
 
-  ssh_secret_key     = file("~/.ssh/id_rsa")
   cloudflare_email   = "<cloudflare_email>"
   cloudflare_zone_id = "<cloudflare_zone_id>"
   cloudflare_token   = "<cloudflare_token>"
+
+  cloudflare_record_value   = "gateway.example.com"
 }
 ```
 
