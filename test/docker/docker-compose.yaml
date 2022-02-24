@@ -2,9 +2,9 @@
 version: "2.1"
 services:
   openssh-server:
-    image: lscr.io/linuxserver/openssh-server
+    build: .
     container_name: openssh-server
-    hostname: test-openssh-server
+    hostname: openssh-server
     environment:
       - PUID=1000
       - PGID=1000
