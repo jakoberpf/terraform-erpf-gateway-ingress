@@ -4,9 +4,7 @@ ${domain} {
             tls_insecure_skip_verify
         }
     }
-    tls ${cloudflare_email} {
-        dns cloudflare ${cloudflare_token}
-    }
+    import cloudflare-tls-dns
     log {
         output file ${log_file_path}
     }
