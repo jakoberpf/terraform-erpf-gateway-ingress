@@ -40,7 +40,7 @@ variable "cloudflare_token" {
 variable "cloudflare_record_value" {
   type        = string
   description = "The value of the dns record, aka. the gateway/loadbalancer public ip"
-  default     = "0.gateway.dns.erpf.de"
+  default     = "gateway.dns.erpf.de"
 }
 
 variable "cloudflare_record_type" {

@@ -7,7 +7,6 @@
 ```hcl
 module "ingress_module" {
   source  = "jakoberpf/gateway-ingress/erpf"
-  version = "0.0.5"
 
   providers = {
     cloudflare = cloudflare
