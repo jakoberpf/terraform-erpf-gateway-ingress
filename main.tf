@@ -6,7 +6,6 @@ terraform {
     }
     remote = {
       source  = "tenstad/remote"
-      version = "0.0.23"
     }
   }
 }

@@ -1,6 +1,6 @@
 data "template_file" "default" {
   count    = length(var.domains)
-  template = file("${path.module}/templates/caddy.default.tpl")
+  template = file("${path.module}/templates/caddy.${var.type}.tpl")
 
   vars = {
     domain           = var.domains[count.index]
@@ -9,18 +9,6 @@ data "template_file" "default" {
     log_file_path    = "/var/log/caddy/access-${replace(var.domains[count.index], ".", "-")}.log"
   }
 }
-
-# data "template_file" "k8s" {
-#   count    = length(var.domains)
-#   template = file("${path.module}/templates/caddy.default.tpl")
-
-#   vars = {
-#     domain           = var.domains[count.index]
-#     host             = var.host
-#     port             = var.port
-#     log_file_path    = "/var/log/caddy/access-${replace(var.domains[count.index], ".", "-")}.log"
-#   }
-# }
 
 resource "remote_file" "this" {
   count       = length(var.domains)

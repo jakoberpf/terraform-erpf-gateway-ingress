@@ -12,6 +12,11 @@ variable "domains" {
 #   description = ""
 # }
 
+variable "type" {
+  type    = string
+  default = "default"
+}
+
 variable "host" {
   type    = string
   default = ""
