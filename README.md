@@ -28,6 +28,16 @@ module "ingress_module" {
 }
 ```
 
-## Ressources
+## Improvements
 
-<https://jhooq.com/terraform-for-and-for-each-loop/>
+<https://caddyserver.com/docs/caddyfile/directives/reverse_proxy>
+
+- forward/set SNI
+
+```json
+transport http {
+  tls
+  tls_insecure_skip_verify
+  tls_server_name ${domain}
+}
+```
