@@ -27,6 +27,11 @@ variable "port" {
   default = 0
 }
 
+variable "https_enabled" {
+  type    = string
+  default = "true"
+}
+
 variable "cloudflare_email" {
   type        = string
   description = ""
