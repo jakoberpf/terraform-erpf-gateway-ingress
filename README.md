@@ -47,13 +47,13 @@ transport http {
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_cloudflare"></a> [cloudflare](#requirement\_cloudflare) | 3.8.0 |
+| <a name="requirement_cloudflare"></a> [cloudflare](#requirement\_cloudflare) | 4.12.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_cloudflare"></a> [cloudflare](#provider\_cloudflare) | 3.8.0 |
+| <a name="provider_cloudflare"></a> [cloudflare](#provider\_cloudflare) | 4.12.0 |
 | <a name="provider_random"></a> [random](#provider\_random) | n/a |
 | <a name="provider_remote"></a> [remote](#provider\_remote) | n/a |
 | <a name="provider_template"></a> [template](#provider\_template) | n/a |
@@ -66,7 +66,7 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [cloudflare_record.cnames](https://registry.terraform.io/providers/cloudflare/cloudflare/3.8.0/docs/resources/record) | resource |
+| [cloudflare_record.cnames](https://registry.terraform.io/providers/cloudflare/cloudflare/4.12.0/docs/resources/record) | resource |
 | [random_string.deployment_id](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/string) | resource |
 | [remote_file.this](https://registry.terraform.io/providers/tenstad/remote/latest/docs/resources/file) | resource |
 | [template_file.default](https://registry.terraform.io/providers/hashicorp/template/latest/docs/data-sources/file) | data source |
